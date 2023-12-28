@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SFN - Student Friendly Notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      header h1 {
+        margin-bottom: 5px;
+        font-size: 2em;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 1.2em;
+        opacity: 0.8;
+      }
+
+      nav {
+        background-color: #444;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center; /* Center aligning the navigation tabs */
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+      nav a.active {
+        background-color: #555; /* Add the desired background color for the active tab */
+        align-items: center;
+        display: flex;
+      }
+
+      section {
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .main-content {
+        flex: 1;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+      }
+
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-box {
+        background-color: #444;
+        color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        width: 300px;
+        box-sizing: border-box;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .login-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+
+      .login-box form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-box label {
+        margin-bottom: 8px;
+      }
+
+      .login-box input {
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #888;
+        border-radius: 4px;
+      }
+
+      .show-password-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        font-size: 0.9em; /* Adjust the font size */
+      }
+
+      .show-password-container input {
+        margin-right: 5px;
+      }
+
+      .login-box button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .login-box button:hover {
+        background-color: #45a049;
+      }
+
+      .forgot-signup-container {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8em; /* Adjust the font size */
+        margin-top: 10px; /* Add margin to the top */
+      }
+
+      .login-box a {
+        color: #45a049; /* Green color for links */
+        text-decoration: none;
+      }
+
+      .login-box a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+      }
+      nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      nav a.active {
+        width: 5%;
+        background-color: #555; /* Add the desired background color for the active tab */
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(45deg, #333, #ffffff, #555, #777);
+        background-size: 600% 600%;
+        animation: gradientAnimation 10s ease infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+          color: #000000; /* Initial text color */
+        }
+        25% {
+          background-position: 25% 50%;
+          color: #000000; /* Transition to black text when gradient is transitioning */
+        }
+        50% {
+          background-position: 50% 50%;
+          color: #000000; /* Transition to white text when gradient is transitioning */
+        }
+        75% {
+          background-position: 75% 50%;
+          color: #b3b2b2; /* Transition to black text when gradient is transitioning */
+        }
+        100% {
+          background-position: 100% 50%;
+          color: #fff; /* Final text color */
+        }
+      }
+
+      /* Additional styles for better visibility */
+      header h1,
+      header p,
+      .main-content h2,
+      .main-content p,
+      footer p {
+        color: #fff; /* Set the default text color to white */
+         /* Apply the same animation to text */
+      }
+
+      /* Exclude animation for specific elements */
+      header h1,
+      header p {
+        animation: none;
+      }
+
+      @keyframes gradientTextAnimation {
+        0% {
+          color: #000000; /* Initial text color */
+        }
+        25% {
+          color: #000000; /* Transition to black text when gradient is transitioning */
+        }
+        50% {
+          color: #000000; /* Transition to white text when gradient is transitioning */
+        }
+        75% {
+          color: #b3b2b2; /* Transition to black text when gradient is transitioning */
+        }
+        100% {
+          color: #fff; /* Final text color */
+        }
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      footer img {
+        max-width: 100%;
+        height: 350px;
+        position: absolute;
+        bottom: -82px;
+        left: -20px;
+      }
+    
+    </style>
+    <script>
+      function togglePassword() {
+        var passwordInput = document.getElementById("password");
+        var showPasswordCheckbox = document.getElementById("showPassword");
+
+        if (showPasswordCheckbox.checked) {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>SFN</h1>
+      <p>Your Gateway to Student Friendly Notes</p>
+    </header>
+
+    <nav>
+      <a href="index.html" class="active">Home </a>
+      <a href="about.html">About</a>
+      <a href="fees.html">Fees</a>
+      <a href="Contact.html">Contact</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="timetable.html">Timetable</a>
+      <a href="marks.html">Marks</a>
+      <a href="notes.html">Notes</a>
+      <a href="live-classes.html">Live Classes</a>
+    </nav>
+    <section>
+      <div class="main-content">
+        <h3>Welcome to</h3><h1>SFN</h1>
+      </div>
+
+      <div class="login-container">
+        <div class="login-box">
+          <h2>Login</h2>
+          <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <div class="show-password-container">
+              <input
+                type="checkbox"
+                id="showPassword"
+                onclick="togglePassword()"
+              />
+              <label for="showPassword">Show Password</label>
+            </div>
+
+            <button type="button">Login</button>
+
+            <div class="forgot-signup-container">
+              <a href="#">Forgot Password?</a>
+              <a href="#">Sign Up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 College Attendance Portal. All rights reserved.</p>
+</footer>
+    </footer>
+  <!-- Add this before </body> -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var chatContainer = document.createElement('div');
+    chatContainer.id = 'chat-container';
+    chatContainer.style.position = 'fixed';
+    chatContainer.style.bottom = '20px';
+    chatContainer.style.right = '20px';
+    chatContainer.style.width = '300px';
+    chatContainer.style.height = '400px';
+    chatContainer.style.background = '#fff';
+    chatContainer.style.border = '1px solid #ccc';
+    chatContainer.style.overflowY = 'scroll';
+    chatContainer.style.display = 'none';
+
+    var chatHeader = document.createElement('div');
+    chatHeader.style.background = '#333';
+    chatHeader.style.color = '#fff';
+    chatHeader.style.padding = '10px';
+    chatHeader.style.textAlign = 'center';
+    chatHeader.innerHTML = '<strong>ChatBot</strong>';
+
+    var chatContent = document.createElement('div');
+    chatContent.style.padding = '10px';
+
+    var chatInput = document.createElement('input');
+    chatInput.type = 'text';
+    chatInput.style.width = '100%';
+    chatInput.style.padding = '5px';
+    chatInput.placeholder = 'Type your message...';
+
+    chatContainer.appendChild(chatHeader);
+    chatContainer.appendChild(chatContent);
+    chatContainer.appendChild(chatInput);
+
+    document.body.appendChild(chatContainer);
+
+    var chatButton = document.createElement('img');
+    chatButton.src = "chatbot.png";  
+    chatButton.alt = 'ChatBot';
+    chatButton.style.position = 'fixed';
+    chatButton.style.bottom = '20px';
+    chatButton.style.right = '20px';
+    chatButton.style.width = '50px';  // Set the width of your image
+    chatButton.style.height = '50px'; // Set the height of your image
+    chatButton.style.borderRadius = '50%';  // Optional: Makes the image circular
+    chatButton.style.cursor = 'pointer';
+    chatButton.addEventListener('click', function () {
+      chatContainer.style.display = 'block';
+      chatButton.style.display = 'none';
+    });
+
+document.body.appendChild(chatButton);
+
+
+    chatInput.addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+        var userMessage = chatInput.value;
+        chatInput.value = '';
+
+        // You can replace this part with actual chatbot logic or integration with a chatbot service
+        var botReply = 'ChatBot: Sorry, I am a basic chatbot. No real functionality implemented.';
+        appendMessage(userMessage, 'user');
+        appendMessage(botReply, 'bot');
+      }
+    });
+
+    function appendMessage(message, sender) {
+      var messageDiv = document.createElement('div');
+      messageDiv.style.marginBottom = '10px';
+
+      if (sender === 'user') {
+        messageDiv.innerHTML = '<strong>You:</strong> ' + message;
+      } else {
+        messageDiv.innerHTML = '<strong>ChatBot:</strong> ' + message;
+      }
+
+      chatContent.appendChild(messageDiv);
+      chatContent.scrollTop = chatContent.scrollHeight; // Auto-scroll to the bottom
+    }
+  });
+</script>
+
+  </body>
+</html>
+

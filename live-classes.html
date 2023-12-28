@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFN - Live Classes</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+            font-size: 2em;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: #555;
+            align-items: center;
+            display: flex;
+        }
+
+        section {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        /* Add specific styles for Live Classes page */
+        .live-classes-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .live-classes-box {
+            background-color: #444;
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 80%;
+            box-sizing: border-box;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .live-classes-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .live-classes-box p {
+            text-align: center;
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        .live-classes-link {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .live-classes-link a {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .live-classes-link a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SFN</h1>
+        <p>Your Gateway to Student Friendly Notes</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="fees.html">Fees</a>
+        <a href="Contact.html">Contact</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="marks.html">Marks</a>
+        <a href="notes.html">Notes</a>
+        <a href="live-classes.html" class="active">Live Classes</a>
+    </nav>
+
+    <section>
+        <div class="main-content">
+            <div class="live-classes-container">
+                <div class="live-classes-box">
+                    <h2>Live Classes and Recorded Lectures</h2>
+                    <p>
+                        Join our live classes to enhance your learning experience.
+                        Interact with instructors and fellow students in real-time.
+                    </p>
+                    <div class="live-classes-link">
+                        <a href="#">Join Live Classes</a>
+                        <a href="#">Recorded Lectures</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 College Attendance Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

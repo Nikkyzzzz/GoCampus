@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFN - Student Friendly Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional styles specific to the notes page */
+    .notes-section {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .subject-notes {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .subject-card {
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .subject-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .subject-card a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center; /* Center aligning the navigation tabs */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    nav a.active {
+      background-color: #555; /* Add a specific style for the active tab */
+    }
+
+    .content {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center aligning the content */
+      padding: 20px; /* Adjusted padding */
+    }
+
+    .main-content {
+      width: 100%;
+      max-width: 1200px; /* Adjusted max-width to expand proportionally */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SFN</h1>
+    <p>Your Gateway to Student Friendly Notes</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="fees.html">Fees</a>
+    <a href="Contact.html">Contact</a>
+    <a href="attendance.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="marks.html">Marks</a>
+    <a href="notes.html" class="active">Notes</a>
+    <a href="live-classes.html">Live Classes</a>
+  </nav>
+
+  <section class="notes-section">
+    <h2>Explore Notes</h2>
+    <div class="subject-notes">
+      <div class="subject-card">
+        <a href="#dbms-notes">Database Management system Notes</a>
+      </div>
+      <div class="subject-card">
+        <a href="#DAA-notes">Design and analysis of algorithm Notes</a>
+      </div>
+      <div class="subject-card">
+        <a href="#Webd-notes">Web Designing Notes</a>
+      </div>
+      <div class="subject-card">
+        <a href="#cc-notes">Cloud Computing Notes</a>
+      </div>
+      <div class="subject-card">
+        <a href="#ai-notes">Artificial Intelligence Notes</a>
+      </div>
+      <div class="subject-card">
+        <a href="#coi-notes">Constitution of India Notes</a>
+      </div>
+      <!-- Add more subjects as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 College Attendance Portal. All rights reserved.</p>
+    
+  </footer>
+</body>
+</html>

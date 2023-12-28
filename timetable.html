@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center; /* Center aligning the navigation tabs */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    nav a.active {
+      background-color: #555; /* Add a specific style for the active tab */
+    }
+
+    .content {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center aligning the content */
+      padding: 20px; /* Adjusted padding */
+    }
+
+    .main-content {
+      width: 100%;
+      max-width: 1200px; /* Adjusted max-width to expand proportionally */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .attendance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #555;
+    }
+
+    .attendance-table th {
+      border: 0;
+      padding: 12px; /* Adjusted padding */
+      text-align: center;
+      color: white;
+      background-color: #555;
+      color: #fff;
+    }
+
+    .attendance-table td{
+      border: 0;
+      padding: 12px; /* Adjusted padding */
+      text-align: center;
+      color: white;
+    }
+
+    .attendance-table .break {
+      background-color: #555;
+    }
+
+    .attendance-table .present {
+      background-color: #4caf50;
+    }
+
+    .attendance-table .absent {
+      background-color: #aaa4a4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+      <h1>SFN</h1>
+      <p>College Attendance portal</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="fees.html">Fees</a>
+    <a href="Contact.html">Contact</a>
+    <a href="attendance.html" >Attendance</a>
+    <a href="timetable.html" class="active">Timetable</a>
+    <a href="marks.html">Marks</a>
+    <a href="notes.html">Notes</a>
+    <a href="live-classes.html">Live Classes</a>
+  </nav>
+
+  <section class="content">
+    <h1>TimeTable</h1> <!-- Moved the heading here -->
+    <div class="main-content">
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Lecture 1</th>
+            <th>Lecture 2</th>
+            <th>Lecture 3</th>
+            <th>Lecture 4</th>
+            <th>Lecture 5</th>
+            <th>Break</th>
+            <th>Lecture 6</th>
+            <th>Lecture 7</th>
+            <th>Lecture 8</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Monday -->
+          <tr>
+            <td>Monday</td>
+            <td class="absent">DBMS</td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="break"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+          </tr>
+          <!-- Tuesday -->
+          <tr>
+            <td>Tuesday</td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="break"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+          </tr>
+          <!-- Wednesday -->
+          <tr>
+            <td>Wednesday</td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="break"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+          </tr>
+          <!-- Thursday -->
+          <tr>
+            <td>Thursday</td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="break"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+          </tr>
+          <!-- Friday -->
+          <tr>
+            <td>Friday</td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="break"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+            <td class="absent"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 College Attendance Portal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
