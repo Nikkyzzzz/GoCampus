@@ -1,4 +1,4 @@
-# SFN - Student Friendly Notes
+# [SFN - Student Friendly Notes](https://nikkyzzzz.github.io/Student-Friendly-Notes/)
 
 This project is **SFN (Student Friendly Notes)**, a comprehensive web application designed to streamline access to notes, attendance, marks, and other essential resources for students. The application features a modern, responsive design with a dynamic gradient background and an intuitive interface.
 
